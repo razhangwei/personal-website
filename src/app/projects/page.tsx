@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Layout from "@/components/Layout";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -35,8 +35,7 @@ export default function Projects() {
   ];
 
   return (
-    <>
-      <Navbar />
+    <Layout>
       <div className="bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -90,27 +89,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <footer className="bg-white dark:bg-gray-900 py-12 border-t border-gray-200 dark:border-gray-700">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <p className="text-gray-600 dark:text-gray-400">
-                © {new Date().getFullYear()} [Your Name]. All rights reserved.
-              </p>
-              <div className="mt-4 flex justify-center space-x-6">
-                <a href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                  Twitter
-                </a>
-                <a href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                  GitHub
-                </a>
-                <a href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
-    </>
+    </Layout>
   );
 }

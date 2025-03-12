@@ -32,11 +32,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body className={`${inter.variable} ${sourceSans.variable} ${jetbrainsMono.variable} font-sans`}>
-        <main className="min-h-screen">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
