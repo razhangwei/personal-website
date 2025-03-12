@@ -36,13 +36,14 @@ const components = {
   // Add more custom components as needed
 };
 
-type BlogPostParams = {
+interface BlogPageProps {
   params: {
     slug: string;
   };
+  searchParams: Record<string, string | string[] | undefined>;
 }
 
-export default async function BlogPost({ params }: BlogPostParams) {
+export default async function BlogPost({ params, searchParams }: BlogPageProps) {
   const { slug } = params;
   const post = await getPostBySlug(slug);
   
