@@ -36,7 +36,13 @@ const components = {
   // Add more custom components as needed
 };
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+type BlogPostParams = {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function BlogPost({ params }: BlogPostParams) {
   const { slug } = params;
   const post = await getPostBySlug(slug);
   
